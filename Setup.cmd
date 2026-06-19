@@ -1,4 +1,4 @@
-﻿@echo off
+@echo off
 
 :: Step 1: Elevate
 >nul 2>&1 fsutil dirty query %systemdrive% || echo CreateObject^("Shell.Application"^).ShellExecute "%~0", "ELEVATED", "", "runas", 1 > "%temp%\uac.vbs" && "%temp%\uac.vbs" && exit /b
@@ -17,5 +17,3 @@ copy /y sqlite3.exe %windir%\system32\sqlite3.exe
 copy /y Vacuum.bat %USERPROFILE%\Desktop\Vacuum.bat
 echo Script completed successfully.
 exit
-=======
->>>>>>> 3c479efe17479d82471b0fc670d9eb43f01e5740
